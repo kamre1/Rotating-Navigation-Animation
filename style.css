@@ -1,0 +1,158 @@
+/* Google Fonts se 'Lato' font ko import kiya gaya hai */
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/* Global CSS reset for all elements */
+* {
+  box-sizing: border-box; /* Box-sizing property set to border-box */
+}
+
+/* Styling for the entire web page body */
+body {
+  font-family: 'Lato', sans-serif; /* Font family set to 'Lato' and sans-serif as fallback */
+  background-color: #333; /* Background color set to dark gray (#333) */
+  color: #222; /* Text color set to slightly lighter gray (#222) */
+  overflow-x: hidden; /* Horizontal scrolling is hidden */
+  margin: 0; /* Reset margin to 0 for the entire page */
+}
+
+/* Styling for the main content container */
+.container {
+  background-color: #fafafa; /* Background color set to light gray (#fafafa) */
+  transform-origin: top left; /* Transform origin set to top left corner */
+  transition: transform 0.5s linear; /* Transition effect for transform property */
+  width: 100vw; /* Full viewport width */
+  min-height: 100vh; /* Full viewport height as minimum height */
+  padding: 50px; /* Padding applied to the container */
+}
+
+/* Styling for the container when 'show-nav' class is added */
+.container.show-nav {
+  transform: rotate(-20deg); /* Rotation applied when 'show-nav' class is added */
+}
+
+/* Styling for the circle container */
+.circle-container {
+  position: fixed; /* Positioned fixed in the viewport */
+  top: -100px; /* Positioned 100px above the top of the viewport */
+  left: -100px; /* Positioned 100px to the left of the viewport */
+}
+
+/* Styling for the circle element */
+.circle {
+  background-color: #ff7979; /* Background color set to a shade of pink (#ff7979) */
+  height: 200px; /* Height set to 200px */
+  width: 200px; /* Width set to 200px */
+  border-radius: 50%; /* Creates a circular shape with rounded corners */
+  position: relative; /* Positioned relative to its parent */
+  transition: transform 0.5s linear; /* Transition effect for transform property */
+}
+
+/* Styling for the circle when 'show-nav' class is added */
+.container.show-nav .circle {
+  transform: rotate(-70deg); /* Rotation applied when 'show-nav' class is added */
+}
+
+/* Styling for the buttons inside the circle */
+.circle button {
+  cursor: pointer; /* Cursor set to pointer (hand) on hover */
+  position: absolute; /* Positioned absolutely within the circle */
+  top: 50%; /* Positioned vertically centered */
+  left: 50%; /* Positioned horizontally centered */
+  height: 100px; /* Height set to 100px */
+  background: transparent; /* Transparent background */
+  border: 0; /* No borders */
+  font-size: 26px; /* Font size set to 26px */
+  color: #fff; /* Text color set to white (#fff) */
+}
+
+/* Styling for the focused button (removing outline) */
+.circle button:focus {
+  outline: none; /* Removes the default focus outline */
+}
+
+/* Styling for the 'open' button */
+.circle button#open {
+  left: 60%; /* Position adjusted to 60% from the left */
+}
+
+/* Styling for the 'close' button */
+.circle button#close {
+  top: 60%; /* Position adjusted to 60% from the top */
+  transform: rotate(90deg); /* Rotation applied (90 degrees) */
+  transform-origin: top left; /* Transform origin set to the top left corner */
+}
+
+/* Styling for the navigation menu items after 'show-nav' */
+.container.show-nav + nav li {
+  transform: translateX(0); /* Translation applied to move items into view */
+  transition-delay: 0.3s; /* Delay for smoother transition */
+}
+
+/* Styling for the navigation menu */
+nav {
+  position: fixed; /* Positioned fixed within the viewport */
+  bottom: 40px; /* Positioned 40px from the bottom */
+  left: 0; /* Positioned flush with the left edge */
+  z-index: 100; /* Z-index set to ensure it's above other content */
+}
+
+/* Styling for the navigation menu's unordered list */
+nav ul {
+  list-style-type: none; /* Removes list bullet points */
+  padding-left: 30px; /* Left padding applied */
+}
+
+/* Styling for individual navigation menu items */
+nav ul li {
+  text-transform: uppercase; /* Text is transformed to uppercase */
+  color: #fff; /* Text color set to white (#fff) */
+  margin: 40px 0; /* Margin applied to control spacing */
+  transform: translateX(-100%); /* Initial translation to hide items offscreen */
+  transition: transform 0.4s ease-in; /* Transition effect for transform property */
+}
+
+/* Styling for icons within navigation menu items */
+nav ul li i {
+  font-size: 20px; /* Font size set to 20px */
+  margin-right: 10px; /* Right margin applied for spacing */
+}
+
+/* Additional spacing for second and third menu items */
+nav ul li + li {
+  margin-left: 15px; /* Left margin added to control spacing */
+  transform: translateX(-150%); /* Translation to hide items offscreen */
+}
+
+/* Additional spacing for the third menu item */
+nav ul li + li + li {
+  margin-left: 30px; /* Left margin increased for spacing */
+  transform: translateX(-200%); /* Translation to hide item offscreen */
+}
+
+/* Styling for images within the content */
+.content img {
+  max-width: 100%; /* Images scaled to fit their container */
+}
+
+/* Styling for the main content container */
+.content {
+  max-width: 1000px; /* Maximum content width set to 1000px */
+  margin: 50px auto; /* Margin applied to center content horizontally */
+}
+
+/* Styling for the main heading within content */
+.content h1 {
+  margin: 0; /* Reset margin for main heading */
+}
+
+/* Styling for small text within content */
+.content small {
+  color: #555; /* Text color set to a shade of gray (#555) */
+  font-style: italic; /* Text styled as italic */
+}
+
+/* Styling for paragraphs within content */
+.content p {
+  color: #333; /* Text color set to a slightly darker gray (#333) */
+  line-height: 1.5; /* Line height set to 1.5 for spacing */
+}
